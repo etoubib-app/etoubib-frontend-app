@@ -3,7 +3,7 @@ services:
   angular-frontend:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: ./docker/Dockerfile.dev
     ports:
       - "4200:4200"
     volumes:

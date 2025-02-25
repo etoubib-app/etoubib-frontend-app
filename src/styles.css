@@ -1,0 +1,20 @@
+@layer theme,  utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-primary: var(--mat-sys-primary);
+  --color-tertiary: var(--mat-sys-tertiary);
+  --color-error: var(--mat-sys-error);
+  --font-sans: var(--bodyfont);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--bodyfont);
+}

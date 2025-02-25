@@ -1,0 +1,7 @@
+@use "@angular/material" as mat;
+
+@include mat.slide-toggle-overrides(
+  (
+    label-text-size: var(--mat-sys-body-large-size),
+  )
+);

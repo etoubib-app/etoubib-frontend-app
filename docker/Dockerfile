@@ -28,5 +28,5 @@ RUN npm run build -- --configuration production
 # Stage 2: Copy static files (optional, for local testing)
 FROM alpine:latest
 WORKDIR /app
-COPY --from=builder /app/dist/your-app-name ./  
+COPY --from=builder /app/dist/etoubib ./  
 CMD ["echo", "Static files are ready for deployment to S3"]

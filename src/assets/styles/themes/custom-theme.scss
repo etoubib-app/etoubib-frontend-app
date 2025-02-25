@@ -1,0 +1,63 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@use "theme-colors" as *;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: $primary-palette,
+        tertiary: $tertiary-palette,
+      ),
+      typography: var(--bodyfont),
+      density: 0,
+    )
+  );
+}
+
+.primary {
+  @include mat.theme(
+    (
+      color: $primary-palette,
+    )
+  );
+}
+
+.tertiary {
+  @include mat.theme(
+    (
+      color: $tertiary-palette,
+    )
+  );
+}
+
+.error {
+  @include mat.theme(
+    (
+      color: $error-palette,
+    )
+  );
+}
+
+:root {
+  --bodyfont: "Poppins", sans-serif;
+  // --success: #{mat.m2-get-color-from-palette(mat.$m2-green-palette, 500)};
+  --bodycolor: #eef5f9;
+  --bodytext: #67757c;
+  --headingtext: #455a64;
+  --link: #1e88e5;
+  --gray: #e0e0e0;
+  --white: #fff;
+  // --inactif: #{mat.m2-get-color-from-palette(mat.$m2-red-palette, 50)};
+  --sidebar-text: #607d8b;
+  --sidebar-icons: #99abb4;
+  --sidebar-selected-text: #fff;
+  --menu-selected-text: #2f3d4a;
+  --menu-selected-bg: #bcd0ef;
+  --nested-table-text: #4682b4;
+  --nested-table-bg: #e6e6fa;
+  --nested-table-header-bg: #bcd0ef;
+  --nested-table-header-text: #2f3d4a;
+}

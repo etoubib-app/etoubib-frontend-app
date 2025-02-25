@@ -1,0 +1,21 @@
+.mat-mdc-radio-group {
+  min-height: 3rem;
+  display: flex !important;
+  align-items: center;
+
+  mat-label {
+    color: var(--mat-sys-primary);
+    flex: 0 0 25%;
+    min-width: 200px !important;
+  }
+
+  .mat-mdc-radio-button {
+    margin-right: 0.625rem /* 10px */ !important;
+    &:has(.mdc-radio--disabled) {
+      cursor: not-allowed;
+      label {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
