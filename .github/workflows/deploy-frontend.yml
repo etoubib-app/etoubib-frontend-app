@@ -20,11 +20,11 @@ jobs:
         id: set-env
         run: |
           if [ "${{ github.ref_name }}" == "develop" ]; then
-            echo "S3_BUCKET=${{ secrets.S3_BUCKET_STAGING }}" >> $GITHUB_ENV
-            echo "CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_STAGING_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_BUCKET=${{ secrets.S3_BUCKET_ADMIN_STAGING }}" >> $GITHUB_ENV
+            echo "CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_ADMIN_STAGING_DISTRIBUTION_ID }}" >> $GITHUB_ENV
           elif [ "${{ github.ref_name }}" == "master" ]; then
-            echo "S3_BUCKET=${{ secrets.S3_BUCKET_PROD }}" >> $GITHUB_ENV
-            echo "CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_PROD_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_BUCKET=${{ secrets.S3_BUCKET_ADMIN }}" >> $GITHUB_ENV
+            echo "CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_ADMIN_DISTRIBUTION_ID }}" >> $GITHUB_ENV
           fi
 
       - name: Set up Node.js
